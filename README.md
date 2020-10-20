@@ -1,4 +1,8 @@
-# README
+# Particle Silo
+
+*Find all the resources you need for your next outreach activity!* 
+
+[SciCommHack Challenge](https://www.scicommhack.com/challenges)
 
 ## Recipes for Contributing (GitHub Users)
 
@@ -24,7 +28,7 @@ git reset --hard upstream/main
 git push origin main
 
 ```
-When ready, submit a Pull Request. :) 
+When ready, submit a Pull Request. :blush:
 
 ## Contact Us for Contributions
 
