@@ -2,7 +2,7 @@
   "name": "particle-silo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://particlesilo.github.io/web",
+  "homepage": "https://particlesilo.github.io/particlesilo/",
   "dependencies": {
     "@craco/craco": "^5.8.0",
     "@testing-library/jest-dom": "^5.11.4",
