@@ -1,6 +1,8 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
+import ParticleSiloLogo from "../logo.svg";
+
 const { Header, Content, Footer } = Layout;
 
 const items = [
@@ -22,17 +24,40 @@ const items = [
   },
 ];
 
-export const AppBar = ({children}) => {
+export const AppBar = ({ children }) => {
   const location = useLocation();
   const baseLength = process.env.PUBLIC_URL.length;
   const currentRoute = location.pathname.slice(baseLength);
   return (
-    <Layout style={{ height: "100vh" }}>
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[currentRoute]} style={{display:"flex", justifyContent:"flex-end"}}>
+    <Layout style={{ height: "100vh", overflow: "scroll" }}>
+      <Header
+        style={{
+          position: "fixed",
+          zIndex: 1,
+          width: "100%",
+          height: "auto",
+          display: "flex",
+          justifyContent: "space-between",
+          backgroundColor:"white"
+        }}
+      >
+        <div className="logo">
+          <img src={ParticleSiloLogo} height="100" />
+        </div>
+        <Menu
+          mode="horizontal"
+          defaultSelectedKeys={[currentRoute]}
+          style={{ display: "flex", justifyContent: "flex-end" }}
+        >
           {items.map((item) => (
-            <Menu.Item key={item.route}>
+            <Menu.Item
+              key={item.route}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
               <Link to={item.route}>{item.title}</Link>
             </Menu.Item>
           ))}
@@ -40,7 +65,13 @@ export const AppBar = ({children}) => {
       </Header>
       <Content
         className="site-layout"
-        style={{ padding: "0 50px", marginTop: 64, width:"80%", marginLeft:"auto", marginRight:"auto" }}
+        style={{
+          padding: "0 50px",
+          marginTop: 100,
+          width: "80%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
       >
         <div
           className="site-layout-background"
@@ -49,9 +80,7 @@ export const AppBar = ({children}) => {
           {children}
         </div>
       </Content>
-      <Footer style={{ textAlign: "center" }}>
-        Particle Silo
-      </Footer>
+      <Footer style={{ textAlign: "center" }}>Particle Silo</Footer>
     </Layout>
   );
 };
