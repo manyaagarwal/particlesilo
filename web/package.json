@@ -2,6 +2,7 @@
   "name": "particle-silo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://particlesilo.github.io/web",
   "dependencies": {
     "@craco/craco": "^5.8.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.8.2",
     "craco-less": "^1.17.0",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -16,6 +18,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
