@@ -14,6 +14,13 @@ git clone git@github.com:particlesilo/particlesilo.git
 git clone git@github.com:usernamehere/particlesilo.git
 
 cd particlesilo
+# If particlesilo developer
+git remote add upstream git@github.com:manyaagarwal/particlesilo.git
+git checkout main
+#git pull upstream main
+git reset --hard upstream/main
+
+# If using your own fork
 git remote add upstream git@github.com:particlesilo/particlesilo.git
 git checkout main
 git pull upstream main # pull latest from main
@@ -45,4 +52,5 @@ npm run deploy
 ```
 
 [1] [How to deploy a Create React App Website to GitHub Pages](https://www.youtube.com/watch?v=ctLFWAanxcI)
+
 [2] [Create React App Deployment](https://create-react-app.dev/docs/deployment/)
