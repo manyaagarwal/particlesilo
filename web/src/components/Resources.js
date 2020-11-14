@@ -1,15 +1,16 @@
 import React from "react";
-import { Tabs, Card, Input } from "antd";
+import { Tabs, Card, Input, Typography } from "antd";
 import { Categories } from "./Categories";
 
 const { TabPane } = Tabs;
 const { Search } = Input;
+const { Title } = Typography;
 
 export const Resources = () => {
   const onSearch = (value) => console.log("Start Search for ", value);
   return (
     <div className="container-card">
-      <h1>Resources</h1>
+      <Title>Resources</Title>
       <Search
         placeholder="Search for Resources"
         allowClear

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "antd";
+import RoyaltyFree from "../assets/royaltyfreeimage.png";
 
 const { Meta } = Card;
 const categories = [
@@ -7,13 +8,13 @@ const categories = [
     title: "ROYALTY-FREE PICTURES",
     description:
       "High-quality, free-to-use pictures of CERN facilities, experiments and so on",
-    image: "https://image.flaticon.com/icons/png/512/188/188802.png",
+    image: RoyaltyFree,
   },
   {
     title: "SHORT VIDEOS AND ANIMATIONS",
     description:
       "Instructional YouTube videos, GIFs and cartoons to explain the foundations of quantum mechanics and particle physics",
-    image: "",
+    image: RoyaltyFree,
   },
   {
     title: "DATA VISUALIZATIONS, CHARTS, PLOTS",
@@ -31,7 +32,7 @@ const categories = [
     title: "PAPER DIGEST",
     description:
       "Some of the most fundamentals research in particle physics and science communication, summarized and made easy to be explained",
-    image: "",
+    image: RoyaltyFree,
   },
   {
     title: "TALKS AND PRESENTATIONS",
