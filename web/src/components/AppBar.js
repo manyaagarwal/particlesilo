@@ -40,7 +40,7 @@ export const AppBar = ({children}) => {
       </Header>
       <Content
         className="site-layout"
-        style={{ padding: "0 50px", marginTop: 64 }}
+        style={{ padding: "0 50px", marginTop: 64, width:"80%", marginLeft:"auto", marginRight:"auto" }}
       >
         <div
           className="site-layout-background"
