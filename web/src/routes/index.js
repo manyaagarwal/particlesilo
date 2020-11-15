@@ -7,21 +7,20 @@ import { ImageResources } from "../components/ImageResources";
 import { VideoResources } from "../components/VideoResources";
 import { PresentationResources } from "../components/PresentationResources";
 import { UploadForm } from "../components/UploadForm";
+import { DataViz } from "../components/DataViz"
 
 export default function Routes() {
   return (
     <AppBar>
       <Switch>
-        <Route path="/upload" component={UploadForm} />
-        <Route path="/tips-tricks" component={TipsTricks} />
-        <Route path="/resources/images" component={ImageResources} />
-        <Route path="/resources/videos" component={VideoResources} />
-        <Route
-          path="/resources/presentations"
-          component={PresentationResources}
-        />
-        <Route path="/resources" component={Resources} />
-        <Route exact path="/" component={Home} />
+        <Route path="/particlesilo" component={Home} />
+        <Route exact path="/upload" component={UploadForm}/>
+        <Route exact path="/tips-tricks" component={TipsTricks} />
+        <Route exact path="/resources" component={Resources} />
+        <Route exact path="/resources/images" component={ImageResources} />
+        <Route exact path="/resources/videos" component={VideoResources} />
+        <Route exact path="/resources/presentations" component={PresentationResources} />
+        <Route exact path="/resources/dataviz" component={DataViz} />
       </Switch>
     </AppBar>
   );
