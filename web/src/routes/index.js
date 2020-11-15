@@ -7,6 +7,7 @@ import { ImageResources } from "../components/ImageResources";
 import { VideoResources } from "../components/VideoResources";
 import { PresentationResources } from "../components/PresentationResources";
 import { UploadForm } from "../components/UploadForm";
+import { DataViz } from "../components/DataViz"
 
 
 export default function Routes() {
@@ -20,6 +21,7 @@ export default function Routes() {
         <Route exact path="/resources/images" component={ImageResources} />
         <Route exact path="/resources/videos" component={VideoResources} />
         <Route exact path="/resources/presentations" component={PresentationResources} />
+        <Route exact path="/resources/dataviz" component={DataViz} />
       </Switch>
     </AppBar>
   );
