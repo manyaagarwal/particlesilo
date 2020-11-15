@@ -69,7 +69,7 @@ export const Categories = () => {
       {categories.map((category) => (
         <Card
           hoverable
-          style={{ width: "350px", backgroundColor: "#DAE5FF", margin: "10px" }}
+          style={{ width: "350px", backgroundColor: "#DAE5FF", margin: "10px", padding:"10px", minHeight:"280px" }}
           cover={<img src={category.image === "" ? "//:0" : category.image} />}
           onClick={() => history.push(category.route)}
         >

@@ -13,6 +13,7 @@ import { QuestionCircleOutlined } from "@ant-design/icons";
 import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 import { FirebaseDB } from "../utils/firebase";
+import PlainBackground from "../assets/Images Website/Background_old.png";
 
 const { Dragger } = Upload;
 const { Option } = Select;
@@ -152,8 +153,17 @@ export const UploadForm = () => {
     console.log("search:", val);
   }
   return (
-    <div style={{display:"flex", justifyContent:"flex-start", flexDirection:"column"}}>
-      <Title style={{textAlign:"left"}}> Upload Resources </Title>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "flex-start",
+        flexDirection: "column",
+        color: "white",
+        backgroundImage: `url(${PlainBackground})`,
+        padding:"15px"
+      }}
+    >
+      <Title style={{ textAlign: "left" }}> Upload Resources </Title>
       <div
         style={{
           height: "80vh",
@@ -173,6 +183,7 @@ export const UploadForm = () => {
             prefix: "86",
           }}
           scrollToFirstError
+          style={{ color: "white" }}
         >
           <Row>
             <Col span={12}>
@@ -289,7 +300,7 @@ export const UploadForm = () => {
               </Form.Item>
 
               <Form.Item {...tailFormItemLayout}>
-                <Button type="primary" htmlType="submit">
+                <Button type="primary" htmlType="submit" style={{backgroundColor:"white", color:"black", width:"200px"}}>
                   Upload
                 </Button>
               </Form.Item>
