@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/particlesilo/static/css/main.ff2a87d3.chunk.css",
+    "main.js": "/particlesilo/static/js/main.4dc06c36.chunk.js",
+    "main.js.map": "/particlesilo/static/js/main.4dc06c36.chunk.js.map",
+    "runtime-main.js": "/particlesilo/static/js/runtime-main.3f7246ec.js",
+    "runtime-main.js.map": "/particlesilo/static/js/runtime-main.3f7246ec.js.map",
+    "static/js/2.b7521b41.chunk.js": "/particlesilo/static/js/2.b7521b41.chunk.js",
+    "static/js/2.b7521b41.chunk.js.map": "/particlesilo/static/js/2.b7521b41.chunk.js.map",
+    "static/js/3.f5c9f26f.chunk.js": "/particlesilo/static/js/3.f5c9f26f.chunk.js",
+    "static/js/3.f5c9f26f.chunk.js.map": "/particlesilo/static/js/3.f5c9f26f.chunk.js.map",
+    "index.html": "/particlesilo/index.html",
+    "static/css/main.ff2a87d3.chunk.css.map": "/particlesilo/static/css/main.ff2a87d3.chunk.css.map",
+    "static/js/2.b7521b41.chunk.js.LICENSE.txt": "/particlesilo/static/js/2.b7521b41.chunk.js.LICENSE.txt",
+    "static/media/logo.b1821787.svg": "/particlesilo/static/media/logo.b1821787.svg",
+    "static/media/royaltyfreeimage.69bdcbb2.png": "/particlesilo/static/media/royaltyfreeimage.69bdcbb2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f7246ec.js",
+    "static/js/2.b7521b41.chunk.js",
+    "static/css/main.ff2a87d3.chunk.css",
+    "static/js/main.4dc06c36.chunk.js"
+  ]
+}
