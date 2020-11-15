@@ -4,6 +4,13 @@
 
 [SciCommHack Challenge](https://www.scicommhack.com/challenges)
 
+## HOW-To Translate
+
+Step0: Open an Issue! See if you can work with people on this.
+Step1: WIP: List of Files to Translate
+Step2: Deploy! See instructions below
+
+
 ## Recipes for Contributing (GitHub Users)
 
 1.) Fork the [repository](https://github.com/particlesilo/particlesilo).
@@ -43,13 +50,21 @@ To contribute Materials, submit a PullRequest to [particleSiloMaterials](https:/
 
 To contribute to the Website, see [main GitHub repo](https://github.com/particlesilo/particlesilo).
 
+## Instructions for local iterations
+
+Install node.js
+
+```
+npm install
+npm start
+```
 
 ## Instructions for Deploying the Website
 See instructions in [2] for set up prior to running these commands:
 
 ```
 yarn add gh-pages
-npm run deploy
+yarn
 ```
 
 [1] [How to deploy a Create React App Website to GitHub Pages](https://www.youtube.com/watch?v=ctLFWAanxcI)
