@@ -22,6 +22,10 @@ const items = [
     title: "SciComm Forum",
     route: "/forum",
   },
+  { 
+    title: "Upload", 
+    route: "/upload"
+  }
 ];
 
 export const AppBar = ({ children }) => {
