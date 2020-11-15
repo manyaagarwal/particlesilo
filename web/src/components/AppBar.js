@@ -2,8 +2,9 @@ import React from "react";
 import { Layout, Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import ParticleSiloLogo from "../logo.svg";
+import Background from "../assets/Images Website/Background.png"
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 const items = [
   {
@@ -33,7 +34,7 @@ export const AppBar = ({ children }) => {
   const baseLength = process.env.PUBLIC_URL.length;
   const currentRoute = location.pathname.slice(baseLength);
   return (
-    <Layout style={{ height: "100vh", overflow: "scroll" }}>
+    <Layout style={{ height: "100vh", overflow: "scroll", backgroundImage:`url(${Background})` }}>
       <Header
         style={{
           position: "fixed",
@@ -84,7 +85,6 @@ export const AppBar = ({ children }) => {
           {children}
         </div>
       </Content>
-      <Footer style={{ textAlign: "center" }}>Particle Silo</Footer>
     </Layout>
   );
 };
