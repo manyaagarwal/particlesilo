@@ -22,6 +22,10 @@ const items = [
     title: "SciComm Forum",
     route: "/forum",
   },
+  { 
+    title: "Upload", 
+    route: "/upload"
+  }
 ];
 
 export const AppBar = ({ children }) => {
@@ -68,7 +72,7 @@ export const AppBar = ({ children }) => {
         style={{
           padding: "0 50px",
           marginTop: 100,
-          width: "80%",
+          width: "90%",
           marginLeft: "auto",
           marginRight: "auto",
         }}
