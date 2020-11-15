@@ -7,12 +7,12 @@ import Splash from "../assets/Images Website/Splash.png";
 export const Home = () => {
   return (
     <div>
-      <Row style={{ flexDirection: "column", justifyContent: "center" }}>
+      <Row style={{ flexDirection: "column", justifyContent:"flex-start" }}>
         <div
           style={{
             background: `url(${Splash})`,
             height: "80vh",
-            width: "100%",
+            width: "65%",
             backgroundSize: "100%",
             display: "flex",
             flexDirection: "column",
@@ -45,7 +45,7 @@ export const Home = () => {
               <Button
               type="primary"
                 style={{
-                  // backgroundColor: "#31abc0",
+                  backgroundColor: "#31abc0",
                   color: "white",
                   border: "0",
                   width: "150px",
@@ -67,7 +67,7 @@ export const Home = () => {
               <Button
               type="primary"
                 style={{
-                  // backgroundColor: "#31abc0",
+                  backgroundColor: "#31abc0",
                   color: "white",
                   border: "0",
                   width: "150px",
