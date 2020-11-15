@@ -13,7 +13,7 @@ export default function Routes() {
   return (
     <AppBar>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route path="/particlesilo" component={Home} />
         <Route exact path="/upload" component={UploadForm}/>
         <Route exact path="/tips-tricks" component={TipsTricks} />
         <Route exact path="/resources" component={Resources} />
