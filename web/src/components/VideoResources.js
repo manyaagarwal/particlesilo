@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { FirebaseDB } from "../utils/firebase";
-import { Card, Tag, Typography, Input } from "antd";
+import { Card, Tag, Typography, Input, Tooltip } from "antd";
 import ReactPlayer from "react-player";
 import PlainBackground from "../assets/Images Website/Background_old.png";
 
 const { Meta } = Card;
 const { Title } = Typography;
-const { Search } = Input; 
+const { Search } = Input;
 
 export const VideoResources = () => {
   const [videoData, setVideoData] = useState([]);
@@ -31,9 +31,9 @@ export const VideoResources = () => {
       </div>
     );
   };
-  const onSearch = (value) => { 
-    console.log(value)
-  }
+  const onSearch = (value) => {
+    console.log(value);
+  };
   return (
     <div style={{ background: `url(${PlainBackground})`, minHeight: "85vh" }}>
       <Title>Video Resources</Title>
@@ -57,11 +57,31 @@ export const VideoResources = () => {
         {videoData.map((video) => (
           <Card
             hoverable
-            style={{ width:"500", backgroundColor: "#DAE5FF", margin: "10px" }}
+            style={{
+              maxWidth: "500px",
+              backgroundColor: "#DAE5FF",
+              margin: "10px",
+            }}
             cover={<ReactPlayer url={video.videoUrl} width="500px" />}
           >
             <Meta
-              title={<div style={{ fontSize: "1.4em" }}>{video.name}</div>}
+            style={{
+              color:"black"
+            }}
+              title={
+                <Tooltip title={video.name}>
+                  <Typography.Text
+                    ellipsis={true}
+                    style={{
+                      fontSize: "1.4em",
+                      wordWrap: "break-word",
+                      textOverflow: "ellipsis"
+                    }}
+                  >
+                    {video.name}
+                  </Typography.Text>
+                </Tooltip>
+              }
               description={topics(video.topic)}
             />
           </Card>
