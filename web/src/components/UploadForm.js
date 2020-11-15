@@ -241,14 +241,13 @@ export const UploadForm = () => {
                   allowClear
                   style={{ width: "100%" }}
                   placeholder="Please select"
-                  //   defaultValue={["a10", "c12"]}
                   onChange={handleChange}
                 >
                   <Option value="children">Children</Option>
                   <Option value="high school">High School Students</Option>
                   <Option value="undergraduate">Undergraduates</Option>
                   <Option value="graduate">Graduates</Option>
-                  <Option value="general public">General Public</Option>
+                  <Option value="general public">Anyone</Option>
                 </Select>
               </Form.Item>
               <Form.Item
