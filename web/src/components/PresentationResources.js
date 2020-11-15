@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { FirebaseDB } from "../utils/firebase";
-import { Collapse, Tag, Typography } from "antd";
+import { Collapse, Tag, Typography, Input } from "antd";
 import { Document, Page } from "react-pdf";
 import Iframe from "react-iframe";
+import PlainBackground from "../assets/Images Website/Background_old.png";
 
 const { Title } = Typography;
 const { Panel } = Collapse;
+const { Search } = Input; 
 
 export const PresentationResources = () => {
   const [presentationData, setPresentationData] = useState([]);
@@ -44,9 +46,21 @@ export const PresentationResources = () => {
     setPageLoadStatus(true);
   }
 
+  const onSearch = (value) => {
+    console.log(value);
+  };
+
   return (
-    <div>
+    <div style={{ background: `url(${PlainBackground})`, minHeight: "85vh" }}>
       <Title>Talks and Presentations</Title>
+      <Search
+        placeholder="Search for Presentations or Talks "
+        allowClear
+        enterButton
+        size="large"
+        onSearch={onSearch}
+        style={{ marginBottom: "15px" }}
+      />
       <Collapse accordion>
         {presentationData.map((presentation, index) => (
           <Panel
