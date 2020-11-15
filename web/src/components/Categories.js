@@ -2,6 +2,12 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { Card } from "antd";
 import RoyaltyFree from "../assets/royaltyfreeimage.png";
+import TalksPresentations from "../assets/TalksandPresentations.png";
+import PaperDigest from "../assets/PaperDigest.png";
+import Activities from "../assets/InteractiveActivitiesandWorkshops.png";
+import DataViz from "../assets/DataVisChartsandPlots.png"
+import VideosAnimations from "../assets/ShortVideosAnimations.png"
+
 
 const { Meta } = Card;
 const categories = [
@@ -16,35 +22,35 @@ const categories = [
     title: "SHORT VIDEOS AND ANIMATIONS",
     description:
       "Instructional YouTube videos, GIFs and cartoons to explain the foundations of quantum mechanics and particle physics",
-    image: RoyaltyFree,
+    image: VideosAnimations,
     route: "/resources/videos",
   },
   {
     title: "DATA VISUALIZATIONS, CHARTS, PLOTS",
     description:
       "Experimental data from CERN and other research centers in particle physics worldwide made visible and accessible",
-    image: "",
+    image: DataViz,
     route: "/",
   },
   {
     title: "INTERACTIVE ACTIVITIES AND WORKSHOPS",
     description:
       "A collection of online and offline quizzes, tools and materials to get your audience to interact",
-    image: "",
+    image: Activities,
     route: "/",
   },
   {
     title: "PAPER DIGEST",
     description:
       "Some of the most fundamentals research in particle physics and science communication, summarized and made easy to be explained",
-    image: RoyaltyFree,
+    image: PaperDigest,
     route: "/",
   },
   {
     title: "TALKS AND PRESENTATIONS",
     description:
       "Speeches and presentations about particle physics themes and research topics",
-    image: "",
+    image: TalksPresentations,
     route: "/resources/presentations",
   },
 ];

@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
-import ParticleSiloLogo from "../logo.svg";
+import ParticleSiloLogo from "../logowhite.svg";
 
 const { Header, Content, Footer } = Layout;
 
@@ -42,13 +42,14 @@ export const AppBar = ({ children }) => {
           height: "auto",
           display: "flex",
           justifyContent: "space-between",
-          backgroundColor:"white"
+          // backgroundColor:"black"
         }}
       >
         <div className="logo">
           <img src={ParticleSiloLogo} height="100" />
         </div>
         <Menu
+          theme="dark"
           mode="horizontal"
           defaultSelectedKeys={[currentRoute]}
           style={{ display: "flex", justifyContent: "flex-end" }}
