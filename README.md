@@ -14,6 +14,13 @@ git clone git@github.com:particlesilo/particlesilo.git
 git clone git@github.com:usernamehere/particlesilo.git
 
 cd particlesilo
+# If particlesilo developer
+git remote add upstream git@github.com:manyaagarwal/particlesilo.git
+git checkout main
+#git pull upstream main
+git reset --hard upstream/main
+
+# If using your own fork
 git remote add upstream git@github.com:particlesilo/particlesilo.git
 git checkout main
 git pull upstream main # pull latest from main
@@ -36,11 +43,15 @@ To contribute Materials, submit a PullRequest to [particleSiloMaterials](https:/
 
 To contribute to the Website, see [main GitHub repo](https://github.com/particlesilo/particlesilo).
 
-## To deploy website locally
+
+## Instructions for Deploying the Website
+See instructions in [2] for set up prior to running these commands:
 
 ```
-# install node https://nodejs.org/en/download/
-cd web
-npm install
-npm start
+yarn add gh-pages
+npm run deploy
 ```
+
+[1] [How to deploy a Create React App Website to GitHub Pages](https://www.youtube.com/watch?v=ctLFWAanxcI)
+
+[2] [Create React App Deployment](https://create-react-app.dev/docs/deployment/)
