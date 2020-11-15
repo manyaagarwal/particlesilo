@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Layout, Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import ParticleSiloLogo from "../logowhite.svg";
-import Background from "../assets/Images Website/Background.png"
+import Background from "../assets/Images Website/Background.png";
+import PlainBackground from "../assets/Images Website/Background_old.png";
 
 const { Header, Content } = Layout;
 
@@ -25,16 +26,29 @@ const items = [
   },
   {
     title: "Upload",
-    route: "/upload"
-  }
+    route: "/upload",
+  },
 ];
 
 export const AppBar = ({ children }) => {
+  const [backgroundImage, setBackgroundImage] = useState(PlainBackground);
   const location = useLocation();
   const baseLength = process.env.PUBLIC_URL.length;
   const currentRoute = location.pathname.slice(baseLength);
+  useEffect(() => {
+    const img = currentRoute === "" ? Background : PlainBackground;
+    setBackgroundImage(img);
+    console.log("change")
+  }, [currentRoute]);
   return (
-    <Layout style={{ height: "100vh", overflow: "scroll", backgroundImage:`url(${Background})` }}>
+    <Layout
+      style={{
+        height: "100vh",
+        overflow: "scroll",
+        backgroundImage: `url(${Background})`,
+        backgroundSize: "cover",
+      }}
+    >
       <Header
         style={{
           position: "fixed",
@@ -43,7 +57,7 @@ export const AppBar = ({ children }) => {
           height: "auto",
           display: "flex",
           justifyContent: "space-between",
-          // backgroundColor:"black"
+          backgroundColor: "#006781",
         }}
       >
         <div className="logo">
@@ -53,7 +67,11 @@ export const AppBar = ({ children }) => {
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={[currentRoute]}
-          style={{ display: "flex", justifyContent: "flex-end" }}
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            backgroundColor: "#006781",
+          }}
         >
           {items.map((item) => (
             <Menu.Item
