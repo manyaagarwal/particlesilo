@@ -15,14 +15,20 @@ const firebaseConfig = {
 let firebaseInitialized = false;
 
 FirebaseModule.initializeApp({
-  firebaseConfig,
+  apiKey: "AIzaSyBpPO9JjeTKF1Ny3WPkg_N8A10iZuzVr5A",
+  authDomain: "particle-silo.firebaseapp.com",
+  databaseURL: "https://particle-silo.firebaseio.com",
+  projectId: "particle-silo",
+  storageBucket: "particle-silo.appspot.com",
+  messagingSenderId: "930203734678",
+  appId: "1:930203734678:web:06de0904476dfd46aca8b7",
 });
 
 firebaseInitialized = true;
 
 let db;
 let storage;
-let auth;   
+let auth;
 
 if (firebaseInitialized) {
   // Initialize Cloud Firestore through Firebase
