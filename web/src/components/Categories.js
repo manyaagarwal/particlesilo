@@ -30,7 +30,7 @@ const categories = [
     description:
       "Experimental data from CERN and other research centers in particle physics worldwide made visible and accessible",
     image: DataViz,
-    route: "/",
+    route: "/resources/dataviz",
   },
   {
     title: "INTERACTIVE ACTIVITIES AND WORKSHOPS",
